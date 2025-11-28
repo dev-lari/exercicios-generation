@@ -1,12 +1,12 @@
-//Elabore um algoritmo que leia o Salário Bruto, o Adicional Noturno, as Horas Extras e os Descontos de um Colaborador, exiba na tela o Salário Líquido.
+//Elabore um algoritmo que leia (precisa do readline-sync) o Salário Bruto, o Adicional Noturno, as Horas Extras e os Descontos de um Colaborador, exiba na tela o Salário Líquido.
+const entrada = require('readline-sync')
 
-//Declarar as variáveis de salario bruto, adicional noturno, horas extras e descontos;
-let salarioBruto = 2000.00;
-let adicionalNoturno = 500.00;
-let horasExtras = 100.00;
-let descontos = 200.00
+let salarioBruto = entrada.questionFloat("Qual o valor do salario bruto?")
+let adicionalNoturno = entrada.questionFloat("Qual o valor do adicional noturno?")
+let horasExtras = entrada.questionFloat("Qual o valor das horas extras?")
+let descontos = entrada.questionFloat("Qual o valor dos descontos?")
 
 //Calcular o salário bruto + adicional noturno + as horas extras (uma operação entre parenteses para que seja feita primeiro) - o desconto
 
 let salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras * 5) - descontos
-console.log(salarioLiquido)
+console.log("O valor do seu salario liquido é: ",salarioLiquido)
